@@ -1,0 +1,78 @@
+/* 
+    =========================================================
+    HEADER & NAVIGATION
+    ========================================================= 
+*/
+
+/* Root variables: for theming and reuse */
+:root {
+  --bg-dark: rgba(13, 17, 23, 0.8); /* translucent dark glass base */
+  --accent: #00ff88; /* neon green terminal accent */
+  --text-light: #e6e6e6;
+  --font-main: "Fira Code", monospace;
+}
+
+/* Apply global font & smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  color: var(--text-light);
+  background-color: #0d1117;
+}
+
+/* --- HEADER LAYOUT --- */
+.site-header {
+  position: sticky; /* stays at top on scroll */
+  top: 0;
+  z-index: 1000; /* ensure it overlays content */
+  background-color: var(--bg-dark);
+  backdrop-filter: blur(8px); /* glass effect for modern browsers */
+  --webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- NAV CONTAINER --- */
+.nav-bar {
+  display: flex; /* horizontal layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto; /* centers content horizontally */
+}
+
+/* --- LOGO --- */
+.logo {
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+/* blinking cursor animation */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* -- NAV LINKS --- */
+.nav-links {
+    list-style: none;  /* remove bullet points */
+    display: flex;
+    gap: 1.5rem; /* space between links */
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--accent);
+}

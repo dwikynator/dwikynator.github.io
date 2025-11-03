@@ -155,13 +155,32 @@
             action="mailto:dwiky.erlangga26@gmail.com"
             method="POST"
             enctype="text/plain"
+            aria-label="Contact form"
           >
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              aria-required="true"
+            />
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+            />
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              aria-required="true"
+            ></textarea>
             <button type="submit" class="btn-primary">Send Message</button>
 
             <!-- Social Links-->

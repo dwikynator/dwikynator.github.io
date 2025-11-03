@@ -13,8 +13,8 @@
 }
 
 /* Prevent accidental horizontal scroll */
-html,
-body {
+section, header, footer {
+  overflow-x: clip;  /* modern and safe alternative */
   max-width: 100%;
 }
 

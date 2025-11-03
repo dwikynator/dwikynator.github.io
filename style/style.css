@@ -123,97 +123,96 @@ html {
 
 /* Hide th echeckbox visually but keep it focusable */
 .nav-toggle {
-    display: none;
+  display: none;
 }
 
 /* Hamburger icon base */
 .nav-toggle-label {
-    display: none;
-    cursor: pointer;
-    width: 30px;
-    height: 24px;
-    position: relative;
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
 }
 
 /* create hamburger */
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 3px;
-    transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 .nav-toggle-label span {
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav-toggle-label span::before {
-    top: -8px;
+  top: -8px;
 }
 
 .nav-toggle-label span::after {
-    top: 8px;
+  top: 8px;
 }
 
 /* Animate hamburger -> X when active */
 .nav-toggle:checked + .nav-toggle-label span {
-    background: transparent;
+  background: transparent;
 }
 
 .nav-toggle:checked + .nav-toggle-label span::before {
-    transform: rotate(45deg);
-    top: 0;
+  transform: rotate(45deg);
+  top: 0;
 }
 
 .nav-toggle:checked + .nav-toggle-label span::after {
-    transform: rotate(-45deg);
-    top: 0;
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 /* Responsivee Behavior */
 @media (max-width: 768px) {
-    /* show hamburger on mobile */
-    .nav-toggle-label {
-        display: block;
-    }
+  /* show hamburger on mobile */
+  .nav-toggle-label {
+    display: block;
+  }
 
-    /* stack logo + burger */
-    .nav-bar {
-        justify-content: space-between;
-    }
+  /* stack logo + burger */
+  .nav-bar {
+    justify-content: space-between;
+  }
 
-    /* Hide nav links by default */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: var(--glass);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        border-top: 1px solid var(--border-weak);
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
+  /* Hide nav links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--glass);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-top: 1px solid var(--border-weak);
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 
-    /* show menu if toggle on */
-    .nav-toggle:checked ~ .nav-links {
-        display: flex;
-    }
+  /* show menu if toggle on */
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
 
-    /* Adjust link appearance */
-    .nav-links a {
-        display: block;
-        padding: 0.5rem 0;
-    }
+  /* Adjust link appearance */
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0;
+  }
 }
-
 
 /* 
     =========================================================
@@ -723,4 +722,9 @@ section {
   .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

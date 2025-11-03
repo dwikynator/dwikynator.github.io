@@ -300,3 +300,91 @@ html {
   font-size: 0.95rem;
   color: #ccc;
 }
+
+/* 
+    =========================================================
+    CONTACT SECTION
+    ========================================================= 
+*/
+
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #0d1117;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(13, 17, 23, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0a0f13;
+  color: var(--text-light);
+  font-family: var(--font-main);
+  resize: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* --- Button --- */
+.contact-form .btn-primary {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.social-links a {
+  margin: 0 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+.social-links p {
+  font-family: var(--font-main);
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
